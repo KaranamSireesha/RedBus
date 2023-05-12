@@ -40,18 +40,18 @@ var imageF = document.querySelectorAll(
 );
 for (let i = 0; i < imageF.length; i++) {
   imageF[i].onclick = function () {
-    let userInput = prompt("Please enter your gender:");
+    var txtMsg;
+  if (confirm("Proceed if you are a female")) {
+    this.src = "./assets/Seat-pink.png";
 
-    if (userInput === "female") {
-      this.src = "./assets/Seat-pink.png";
-
-      c = c + 1;
+     c = c + 1;
       updateDetails(c);
 
-      this.onclick = null;
-    } else {
-      imageF[i] = alert("This seat is for female passengers");
-    }
+       this.onclick = null;
+    
+  } else {
+    txtMsg = alert("This seat is for female passengers");
+  }
   };
 }
 
