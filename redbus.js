@@ -55,6 +55,7 @@ for (let i = 0; i < imageF.length; i++) {
   };
 }
 
+
 function updateDetails() {
   numberofSeatsBooked.innerHTML = `no of seats booked ${c}`;
   totalAmount.innerHTML = `${ticketPrice * c}`;
@@ -74,3 +75,6 @@ for (let i = 0; i < booked.length; i++) {
     booked[i] = alert("This seat is reserved!");
   });
 }
+
+
+
